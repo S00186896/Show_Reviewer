@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        >
+
+    <!-- <TabControl TabStripPlacement="Top">
+        <TabItem Name="RateShows" Header="Rate Shows" Width="100"> -->
+    <Grid RenderTransformOrigin="0.506,0.524">
+        <ListBox x:Name="lbxShow" HorizontalAlignment="Left" Height="275" Margin="50,107,0,0" VerticalAlignment="Top" Width="176" SelectionChanged="LbxShow_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,39,0,0" TextWrapping="Wrap" Text="TV Show Reviewer" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" TextDecorations="Underline" Foreground="#DDFFFFFF"/>
+        <TextBlock HorizontalAlignment="Left" Margin="99,86,0,0" TextWrapping="Wrap" Text="Choose Show" VerticalAlignment="Top" FontWeight="Bold"/>
+        <RadioButton x:Name="rbOneStar" Content="1 star" HorizontalAlignment="Left" Margin="486,107,0,0" VerticalAlignment="Top" Checked="rbOneStar_Checked"/>
+        <RadioButton x:Name="rbTwoStar" Content="2 star" HorizontalAlignment="Left" Margin="486,126,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbThreeStar" Content="3 star" HorizontalAlignment="Left" Margin="486,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.494"/>
+        <RadioButton x:Name="rbFourStar" Content="4 star" HorizontalAlignment="Left" Margin="486,166,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbFiveStar" Content="5 star" HorizontalAlignment="Left" Margin="486,186,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.557,0.574"/>
+        <ListBox x:Name="lbxEpisode" HorizontalAlignment="Left" Height="118" Margin="267,264,0,0" VerticalAlignment="Top" Width="168" SelectionChanged="lbxEpisode_SelectionChanged" />
+        <TextBlock HorizontalAlignment="Left" Margin="306,243,0,0" TextWrapping="Wrap" Text="Choose Episode" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="486,86,0,0" TextWrapping="Wrap" Text="Rating" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="486,243,0,0" TextWrapping="Wrap" Text="Your Review" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="tbxReview" HorizontalAlignment="Left" Height="88" Margin="486,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" TextChanged="tbxReview_TextChanged"/>
+        <ListBox x:Name="lbxSeason" HorizontalAlignment="Left" Height="113" Margin="267,107,0,0" VerticalAlignment="Top" Width="168" SelectionChanged="LbxSeason_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="310,86,0,0" TextWrapping="Wrap" Text="Choose Season" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="btnSaveReview" Content="Save Review" HorizontalAlignment="Left" Margin="569,361,0,0" VerticalAlignment="Top" Width="113" Click="BtnSaveReview_Click"/>
+        <Image x:Name="imgBox" HorizontalAlignment="Left" Height="166" Margin="610,75,0,0" VerticalAlignment="Top" Width="119"/>
+    </Grid>
+    <!--  </TabItem> 
+        
+        <TabItem Name="AddShows" Header="Add Shows" Width="100">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    
+                </Grid.RowDefinitions>
+                
+            </Grid>
+        </TabItem>
+    </TabControl> -->
+
+</Window>

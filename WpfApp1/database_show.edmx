@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="database_show.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="database_showStoreContainer">
+    <EntitySet Name="Shows" EntityType="database_show.Store.Shows" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Seasons" EntityType="database_show.Store.Seasons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Episodes" EntityType="database_show.Store.Episodes" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Shows">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Seasons">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name2" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="noSeason" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Episodes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name3" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="noEpisode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="epRating" Type="int" Nullable="false" />
+    <Property Name="epReview" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="database_show" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="database_showContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Shows" EntityType="database_show.Shows" />
+          <EntitySet Name="Seasons" EntityType="database_show.Seasons" />
+          <EntitySet Name="Episodes" EntityType="database_show.Episodes" />
+        </EntityContainer>
+        <EntityType Name="Shows">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Seasons">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name2" Type="String" Nullable="false" />
+          <Property Name="noSeason" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Episodes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name3" Type="String" Nullable="false" />
+          <Property Name="noEpisode" Type="String" Nullable="false" />
+          <Property Name="epRating" Type="Int32" Nullable="false" />
+          <Property Name="epReview" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="database_showStoreContainer" CdmEntityContainer="database_showContainer">
+    <EntitySetMapping Name="Shows">
+      <EntityTypeMapping TypeName="IsTypeOf(database_show.Shows)">
+        <MappingFragment StoreEntitySet="Shows">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Seasons">
+      <EntityTypeMapping TypeName="IsTypeOf(database_show.Seasons)">
+        <MappingFragment StoreEntitySet="Seasons">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name2" ColumnName="name2" />
+          <ScalarProperty Name="noSeason" ColumnName="noSeason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Episodes">
+      <EntityTypeMapping TypeName="IsTypeOf(database_show.Episodes)">
+        <MappingFragment StoreEntitySet="Episodes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name3" ColumnName="name3" />
+          <ScalarProperty Name="noEpisode" ColumnName="noEpisode" />
+          <ScalarProperty Name="epRating" ColumnName="epRating" />
+          <ScalarProperty Name="epReview" ColumnName="epReview" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
